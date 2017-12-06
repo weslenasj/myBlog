@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<HTML lang="pt-br">
+	<HEAD>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="img/logo_bh.png"/>
+		<link rel="stylesheet" type="text/css " href="css/style.css" />
+		<script src="js/myjs.js"></script>
+		<title>Bem-Vindo à Hogwarts</title>
+	</HEAD>
+	<BODY>
+		<!-- CABEÇALHO 
+		<section id="cabecalho">
+			<header>
+				<div class="image"></div>
+				<div class="contener_cabecalho">
+					<h1>Bem-Vindo à Hogwarts</h1>
+					<h2> Conheça um pouco mais deste lugar mágico!</h2>
+				</div>				
+			</header>
+		</section> -->
+		<!-- MENU -->
+		<section id="menutop">
+			<nav class="menutop">
+				<a href="index.html" class="active">Página Inicial</a>
+				<a href="#floresta_hogwarts">Familias Bruxas</a>
+				<a href="#expresso_hogwarts">Animais Fantasticos</a>
+				<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="menuTop()">&#9776;</a>
+			</nav>
+		</section>
+		<!-- CORPO-->	
+		<section id="corpo">	
+			<!-- HISTOIRIA DE HOGWARTS-->
+			<article id="h_hogwarts">
+				<img src="img/bandeira_hogwarts.png" alt="Imagem do Logo de Hogwarts" class="img_esquerda">
+				<h1>Escola de Magia e Bruxaria de Hogwarts</h1>
+				<p>É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de "Conteúdo aqui, conteúdo aqui", fazendo com que ele tenha uma aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na internet agora usam Lorem Ipsum como texto-modelo padrão, e uma rápida busca por 'lorem ipsum' mostra vários websites ainda em sua fase de construção. Várias versões novas surgiram ao longo dos anos, eventualmente por acidente, e às vezes de propósito (injetando humor, e coisas do gênero).
+				É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de "Conteúdo aqui, conteúdo aqui", fazendo com que ele tenha uma aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na internet agora usam Lorem Ipsum como texto-modelo padrão, e uma rápida busca por 'lorem ipsum' mostra vários websites ainda em sua fase de construção. Várias versões novas surgiram ao longo dos anos, eventualmente por acidente, e às vezes de propósito (injetando humor, e coisas do gênero).
+				É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de "Conteúdo aqui, conteúdo aqui", fazendo com que ele tenha uma aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na internet agora usam Lorem Ipsum como texto-modelo padrão, e uma rápida busca por 'lorem ipsum' mostra vários websites ainda em sua fase de construção. Várias versões novas surgiram ao longo dos anos, eventualmente por acidente, e às vezes de propósito (injetando humor, e coisas do gênero).</p>
+			</article>
+			<!-- CASAS DE HOGWARTS -->
+			<article id="casas">
+				<!-- BANDEIRAS -->
+				<div>
+					<h1>Casas</h1>
+					<p>Cada fundador prezava uma característica, e gostaria que ela fosse utilizada como critério de seleção. O Chapéu Seletor,o antigo chapéu de Godric Gryffindor(fundador da Grifinória),agora é dispositivo mágico usado para efeiturar a divisão dos alunos em casas.</p>
+					<button class="tablinks" onclick="openCasas(event, 'Corvinal')"><img src="img/bandeira_convinal.png" alt="Imagem do Logo da casa de Corvinal"></button>
+					<button class="tablinks" onclick="openCasas(event, 'Grifinoria')"><img src="img/bandeira_grifinoria.png" alt="Imagem do Logo da casa de Grifinória"></button>
+					<button class="tablinks" onclick="openCasas(event, 'Lufa_lufa')"><img src="img/bandeira_lufa_lufa.png" alt="Imagem do Logo da casa de Corvinal"></button>
+					<button class="tablinks" onclick="openCasas(event, 'Sonserina')"><img src="img/bandeira_soncerina.png" alt="Imagem do Logo da casa de Corvinal"></button>
+				</div>
+				<!-- CASA CORVINAL-->
+				<article id="Corvinal" class="tabcontent">
+				  <h1>Corvinal</h1>
+				  <p></p>
+				</article>
+				<!-- CASA GRIFINORIA-->
+				<article id="Grifinoria" class="tabcontent">
+				  <h1>Grifinória</h1>
+				  <p></p>
+				</article>
+				<!-- CASA LUFA LUFA-->
+				<article id="Lufa_lufa" class="tabcontent">
+				  <h1>Lufa-Lufa</h1>
+				  <p></p>
+				</article>
+				<!-- CASA SONSERINA-->
+				<article id="Sonserina" class="tabcontent">
+				  <h1>Sonserina</h1>
+				  <p></p>
+				</article>
+			</article>
+			<!-- EXPRESSO HOGWARTS -->
+			<a href="hogwarts_expresso.html">
+				<article id="expresso_hogwarts" class="retan_com_img">			
+					<img src="img/kingcross.jpg" alt="Notebook" style="width:100%;">
+					<div class="retan">
+						<h1>Expresso Hogwarts</h1>
+					</div>				
+				</article>
+			</a>
+			<!-- FLORESTA PROIBIDA HOGWARTS -->
+			<article id="floresta_hogwarts" class="retan_com_img">			
+				<img src="img/floresta_hogwarts.jpg" alt="Notebook" style="width:100%;">
+				<div class="retan">
+					<h1>Floresta Proibida</h1>					
+				</div>
+			</article>			
+		</section>
+		<section id="rodape">
+			<footer>
+				
+			</footer>
+		</section>	
+	</BODY>
+</HTML>
