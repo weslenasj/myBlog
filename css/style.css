@@ -10,9 +10,9 @@ p{
   font-family: "Franklin Gothic Book";
 }
 h1{
-  font-size: 3em;
+  font-size: 5vw;
   font-family: 'Monotype Corsiva';
-  margin: 10px;
+  margin: 5px;
 }
 h2{
   font-size: 2em;
@@ -57,8 +57,7 @@ h2{
 /* CABEÇALHO */
 #cabecalho .image{
   opacity: 1;
-  display: block;
-  height: auto;
+  display: block;  
   transition: .5s ease;
   backface-visibility: hidden;
   background: url(../img/expresso_hogwarts.png);
@@ -92,6 +91,14 @@ h2{
   font-weight: lighter;
   text-align: center;
 }
+@media screen and (max-width: 1500px){	
+	#cabecalho .image{opacity: 0.3;}
+	#cabecalho .contener_cabecalho{opacity: 1;}
+	#cabecalho .image{
+		background: url(../img/kingcross.jpg) no-repeat;	
+		background-size: cover;
+	}
+  }
 /* MENU */
 .menutop{
   overflow: hidden;
@@ -102,7 +109,7 @@ h2{
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 0.875em 1em;
+  padding: 15px 16px;
   text-decoration: none;
   font-size: 1.0625em;
 }
@@ -119,7 +126,7 @@ h2{
 }
 @media screen and (max-width: 600px) {
   .menutop a:not(:first-child) {display: none;}
-  .menutop a.icon {
+  .menutop a.icon {	 
     float: right;
     display: block;
   }
@@ -127,6 +134,7 @@ h2{
 @media screen and (max-width: 600px) {
   .menutop.responsive {position: relative;}
   .menutop.responsive .icon {
+	   color:black;
     position: absolute;
     right: 0;
     top: 0;
@@ -197,7 +205,6 @@ h2{
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
     color: #f1f1f1;
-    padding: 20px;
     width:100%;
 }
 
