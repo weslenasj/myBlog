@@ -8,30 +8,29 @@
 		<script src="js/myjs.js"></script>
 		<title>Bem-Vindo à Hogwarts</title>
 	</HEAD>
-	<BODY>
-		<!-- CABEÇALHO 
-		<section id="cabecalho">
-			<header>
+<body>
+	<section>
+		<header>
+			<a href="#myTopnav">
 				<div class="image"></div>
 				<div class="contener_cabecalho">
 					<h1>Bem-Vindo à Hogwarts</h1>
 					<h2> Conheça um pouco mais deste lugar mágico!</h2>
-				</div>				
-			</header>
-		</section> -->
-		<!-- MENU -->
-		<section id="menutop">
-			<nav class="menutop">
-				<a href="index.html" class="active">Página Inicial</a>
-				<a href="#floresta_hogwarts">Familias Bruxas</a>
-				<a href="#expresso_hogwarts">Animais Fantasticos</a>
-				<a href="#casas">JK Rowling</a>
-				<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="menuTop()">&#9776;</a>
-			</nav>
-		</section>
-		<!-- CORPO-->	
-		<section id="corpo">
-			<article>
+				</div>		
+			</a>
+		</header>
+	</section>
+	<section>
+		<nav class="topmenu" id="myTopnav">			
+		  <a href="index.html" class="active">Início</a>
+		  <a href="#news">News</a>
+		  <a href="#contact">Contact</a>
+		  <a href="#about">About</a>
+		  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>			
+		</nav>
+	</section>
+	<section class="corpo">
+		<article>
 				<img src="img/mapa_beco_diagonal.jpg" alt="Mapa do Beco Diagonal" width="100%">
 				<h1>Fato sobre o Beco Diagonal</h1>
 				<h2>ONDE NO MUNDO</h2>
@@ -83,10 +82,39 @@
 			</a>	
 			
 		</section>
-		<section id="rodape">
-			<footer>
+	<section>
+		<footer>
+			<article> 
 				
-			</footer>
-		</section>
-	</BODY>
-</HTML>
+			</article>
+			<article> 
+				
+			</article>
+		</footer>
+	</section>
+	
+	<script>
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topmenu") {
+				x.className += " responsive";
+			} else {
+				x.className = "topmenu";
+			}
+		}
+		
+		window.onscroll = function() {myFunction2()};
+
+		var navbar = document.getElementById("myTopnav");
+		var sticky = navbar.offsetTop;
+
+		function myFunction2() {
+		  if (window.pageYOffset >= sticky) {
+			navbar.classList.add("sticky")
+		  } else {
+			navbar.classList.remove("sticky");
+		  }
+		}
+	</script>
+</body>
+</html>

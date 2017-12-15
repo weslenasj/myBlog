@@ -8,63 +8,89 @@
 		<script src="js/myjs.js"></script>
 		<title>Bem-Vindo à Hogwarts</title>
 	</HEAD>
-	<BODY>
-		<!-- CABEÇALHO -->
-		<section id="cabecalho">
-			<header>
-				<a href="#menutop">
-					<div class="image"></div>
-					<div class="contener_cabecalho">
-						<h1>Bem-Vindo à Hogwarts</h1>
-						<h2> Conheça um pouco mais deste lugar mágico!</h2>
-					</div>		
-				</a>					
-			</header>
-		</section>
-		<!-- MENU -->
-		<section id="menutop">
-			<nav class="menutop">
-				<a href="index.html" class="active">Página Inicial</a>
-				<a href="#floresta_hogwarts">Familias Bruxas</a>
-				<a href="#expresso_hogwarts">Animais Fantasticos</a>
-				<a href="#casas">JK Rowling</a>
-				<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="menuTop()">&#9776;</a>
-			</nav>
-		</section>
-		<!-- CORPO-->	
-		<section id="corpo">			
-			<!-- ESCOLAS PELO MUNDO -->
-			<a href="escolas.html">
-				<article class="retan_com_img">
-					<img src="img/mapa_escolas.jpg" alt="Imagem do Mapa das Escolas Magicas" style="width:100%;">
-					<div class="retan">
-						<h1>Escolas Mágicas</h1>					
-					</div>
-				</article>
+<body>
+	<section>
+		<header>
+			<a href="#myTopnav">
+				<div class="image"></div>
+				<div class="contener_cabecalho">
+					<h1>Bem-Vindo à Hogwarts</h1>
+					<h2> Conheça um pouco mais deste lugar mágico!</h2>
+				</div>		
 			</a>
-			<!-- BECO DIAGONAL -->
-			<a href="beco_diagonal.html">
-				<article class="retan_com_img">			
-					<img src="img/beco_diagornal.jpg" alt="Imagem do Baco Diagonal " style="width:100%;">
-					<div class="retan">
-						<h1>Beco Diagonal</h1>					
-					</div>
-				</article>
+		</header>
+	</section>
+	<section>
+		<nav class="topmenu" id="myTopnav">			
+		  <a href="index.html" class="active">Início</a>
+		  <a href="#news">News</a>
+		  <a href="#contact">Contact</a>
+		  <a href="#about">About</a>
+		  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>			
+		</nav>
+	</section>
+	<section class="corpo">
+		<!-- ESCOLAS PELO MUNDO -->			
+		<article class="retan_com_img">
+			<a href="escolas_magicas.html">
+				<img src="img/mapa_escolas.jpg" alt="Imagem do Mapa das Escolas Magicas" style="width:100%;">
+				<div class="retan">
+					<h1>Escolas Mágicas</h1>					
+				</div>
 			</a>
-			<!-- VARINHAS -->
-			<a href="varinhas.html">
-				<article class="retan_com_img">			
-					<img src="img/varinhas_fotos.png" alt="Imagem de varinhas" style="width:100%;">
-					<div class="retan">
-						<h1>Varinhas</h1>					
-					</div>
-				</article>
+		</article>			
+		<!-- BECO DIAGONAL -->			
+		<article class="retan_com_img">	
+			<a href="beco_diagonal.html">		
+				<img src="img/beco_diagornal.jpg" alt="Imagem do Baco Diagonal " style="width:100%;">
+				<div class="retan">
+					<h1>Beco Diagonal</h1>					
+				</div>
 			</a>
-		</section>
-		<section id="rodape">
-			<footer>
+		</article>			
+		<!-- VARINHAS -->			
+		<article class="retan_com_img">	
+			<a href="varinhas.html">		
+				<img src="img/varinhas_fotos.png" alt="Imagem de varinhas" style="width:100%;">
+				<div class="retan">
+					<h1>Varinhas</h1>					
+				</div>
+			</a>
+		</article>			
+	</section>	
+	<section>
+		<footer>
+			<article> 
 				
-			</footer>
-		</section>
-	</BODY>
-</HTML>
+			</article>
+			<article> 
+				
+			</article>
+		</footer>
+	</section>
+	
+	<script>
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topmenu") {
+				x.className += " responsive";
+			} else {
+				x.className = "topmenu";
+			}
+		}
+		
+		window.onscroll = function() {myFunction2()};
+
+		var navbar = document.getElementById("myTopnav");
+		var sticky = navbar.offsetTop;
+
+		function myFunction2() {
+		  if (window.pageYOffset >= sticky) {
+			navbar.classList.add("sticky")
+		  } else {
+			navbar.classList.remove("sticky");
+		  }
+		}
+	</script>
+</body>
+</html>

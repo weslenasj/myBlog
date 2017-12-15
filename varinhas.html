@@ -8,31 +8,29 @@
 		<script src="js/myjs.js"></script>
 		<title>Bem-Vindo à Hogwarts</title>
 	</HEAD>
-	<BODY>
-		<!-- CABEÇALHO
-		<section id="cabecalho">
-			<header>
+<body>
+	<section>
+		<header>
+			<a href="#myTopnav">
 				<div class="image"></div>
 				<div class="contener_cabecalho">
 					<h1>Bem-Vindo à Hogwarts</h1>
 					<h2> Conheça um pouco mais deste lugar mágico!</h2>
-				</div>				
-			</header>
-		</section> -->
-		<!-- MENU -->
-		<section id="menutop">
-			<nav class="menutop">
-				<a href="index.html" class="active">Página Inicial</a>
-				<a href="#floresta_hogwarts">Familias Bruxas</a>
-				<a href="#expresso_hogwarts">Animais Fantasticos</a>
-				<a href="#casas">JK Rowling</a>
-				<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="menuTop()">&#9776;</a>
-			</nav>
-		</section>
-		<!-- CORPO-->	
-		<section id="corpo">	
-			<!-- HISTOIRIA DE HOGWARTS-->
-			<article id="varinhas">
+				</div>		
+			</a>
+		</header>
+	</section>
+	<section>
+		<nav class="topmenu" id="myTopnav">			
+		  <a href="index.html" class="active">Início</a>
+		  <a href="#news">News</a>
+		  <a href="#contact">Contact</a>
+		  <a href="#about">About</a>
+		  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>			
+		</nav>
+	</section>
+	<section class="corpo">
+		<article id="varinhas">
 				<img src="img/varinhas_fotos.png" alt="Imagem de varinhas" width="100%">
 				<h1>Cantos de varinha</h1>
 				<p>A seguinte descrição dos poderes e propriedades dos três núcleos de varinha principais utilizados por Garrick Ollivander são retiradas de suas próprias notas.</p>
@@ -58,20 +56,49 @@
 				<p>As varinhas de penas de Phoenix são sempre as mais pickiest quando se trata de potenciais proprietários, pois a criatura a partir da qual são tomadas é uma das mais independentes e destacadas do mundo. Essas varas são as mais difíceis de domar e personalizar, e sua fidelidade geralmente é duramente conquistada.</p>
 				
 			</article>
-			<!-- sr Ollivaras -->
-			<a href="sr_olivaras.html">
-				<article id="floresta_hogwarts" class="retan_com_img">			
+			<!-- sr Ollivaras -->			
+			<article id="floresta_hogwarts" class="retan_com_img">
+				<a href="sr_olivaras.html">
 					<img src="img/sr_olli.jpg" alt="Imagem da loja do Sr. Ollivander" style="width:100%;">
 					<div class="retan">
 						<h1>Sr. Ollivander</h1>					
 					</div>
-				</article>	
-			</a>
+				</a>
+			</article>			
 		</section>
-		<section id="rodape">
-			<footer>
+	<section>
+		<footer>
+			<article> 
 				
-			</footer>
-		</section>
-	</BODY>
-</HTML>
+			</article>
+			<article> 
+				
+			</article>
+		</footer>
+	</section>
+	
+	<script>
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topmenu") {
+				x.className += " responsive";
+			} else {
+				x.className = "topmenu";
+			}
+		}
+		
+		window.onscroll = function() {myFunction2()};
+
+		var navbar = document.getElementById("myTopnav");
+		var sticky = navbar.offsetTop;
+
+		function myFunction2() {
+		  if (window.pageYOffset >= sticky) {
+			navbar.classList.add("sticky")
+		  } else {
+			navbar.classList.remove("sticky");
+		  }
+		}
+	</script>
+</body>
+</html>

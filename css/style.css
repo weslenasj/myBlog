@@ -4,7 +4,7 @@ body{
 }
 p{
   text-align: justify;
-  text-indent:4em;
+  text-indent: 5vw;
   margin: 1.25em;
   font-size: 1.3em;
   font-family: "Franklin Gothic Book";
@@ -19,53 +19,19 @@ h2{
   font-family: 'Monotype Corsiva';
   margin: 10px;
 }
-.p_borda{
-  border-left: 10px solid #dee2cb;
-  margin: 40px;
-  padding: 20px;
-}
-/* BOTÂO TOPO*/
-#myBtn {	
-	background:	#e8e8e4;
-	display: none;
-	position: fixed;
-	bottom: 20px;
-	right: 30px;
-	z-index: 99;
-	border: none;
-	outline: none;	
-	cursor: pointer;
-	padding: 15px;	  
-}
-
-#myBtn:hover {
-  /*background-color: #555;*/
-}
-/* BARRA DE ROLAGEM */
-/* tamanho */
-::-webkit-scrollbar {
-  width: 10px;
-}
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1; 
-} 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #000; 
-}
 /* CABEÇALHO */
-#cabecalho .image{
+header .image{
+  background: url(../img/expresso_hogwarts.png);
+  text-align: center;
+  background-size: cover;
+  width: 100%;  
+  min-height: 100vh;
   opacity: 1;
   display: block;  
   transition: .5s ease;
   backface-visibility: hidden;
-  background: url(../img/expresso_hogwarts.png);
-  background-size: cover;
-  width: 100%;  
-  min-height: 100vh;
 }
-#cabecalho .contener_cabecalho{
+header .contener_cabecalho{
   transition: .5s ease;
   opacity: 0;
   position: absolute;
@@ -74,88 +40,64 @@ h2{
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
-#cabecalho:hover .image { opacity: 0.3;}
-#cabecalho:hover .contener_cabecalho{opacity: 1;}
-#cabecalho h1 {
+header:hover .image { opacity: 0.3;}
+header:hover .contener_cabecalho{opacity: 1;}
+header h1 {
   color: #000;
   font-size: 5em;  
   margin: 0;
+  text-align: center;
 }
-#font_hp{
-  font-family: 'Harry P';
-}
-#cabecalho h2{
+header h2{
   color: #000;
   font-size: 1.5em;
   font-family: 'Century Gothic';
   font-weight: lighter;
   text-align: center;
 }
-@media screen and (max-width: 1500px){	
-	#cabecalho .image{opacity: 0.3;}
-	#cabecalho .contener_cabecalho{opacity: 1;}
-	#cabecalho .image{
-		background: url(../img/kingcross.jpg) no-repeat;	
-		background-size: cover;
-	}
-  }
-/* MENU */
-.menutop{
+.topmenu {
   overflow: hidden;
   background-color: #000;
+  z-index: 1;
 }
-.menutop a{
+.topmenu a {
   float: right;
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 15px 16px;
+  padding: 14px 16px;
   text-decoration: none;
-  font-size: 1.0625em;
+  font-size: 17px;
 }
-.menutop a:hover{
+.topmenu a:hover {
   background-color: #e8e8e4;
   color: black;
 }
-.menutop a.active {
+.topmenu a.active {
   background-color: #e8e8e4;
   color: #000;
 }
-.menutop .icon {
+.topmenu .icon {
   display: none;
 }
-@media screen and (max-width: 600px) {
-  .menutop a:not(:first-child) {display: none;}
-  .menutop a.icon {	 
-    float: right;
-    display: block;
-  }
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
 }
-@media screen and (max-width: 600px) {
-  .menutop.responsive {position: relative;}
-  .menutop.responsive .icon {
-	   color:black;
-    position: absolute;
-    right: 0;
-    top: 0;
+.sticky + .corpo {
 }
-  .menutop.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
-/* CORPO */
-#corpo{
+.corpo{
   padding: 3.125em;
   background: #e8e8e4;
 }
-#corpo article{
+.corpo article{
   background: #ffffff;
   margin: 0 auto;
   max-width: 1000px;
   margin-bottom: 1.25em;
 }
+
 /* HISTORIA DE HOGWARTS */
 #h_hogwarts img{
   float: left;
@@ -191,6 +133,19 @@ h2{
   padding: 6px 12px;    
   background-color: #dee2cb;
 }
+
+footer{
+  background: #000; 
+  height: auto;
+  padding: 20px; 
+}
+footer article{
+	width: 50%;
+	height: 200px;
+	background: #fff;
+	float: left;
+}
+
 /* TEXTOS COM FUNDO DE IMAGENS*/
 .retan_com_img {
     position: relative;
@@ -208,9 +163,41 @@ h2{
     width:100%;
 }
 
-#rodape{
-  width: 100%;
-  height: 100px;
-  background: #000;
-  color: #fff;
+/* MEDIA RESPONSIVIDADE */
+@media screen and (max-width: 600px) {
+  .topmenu a:not(:first-child) {display: none;}
+  .topmenu a.icon {
+    float: right;
+    display: block;
+  }
 }
+
+@media screen and (max-width: 600px) {
+  .topmenu.responsive {position: relative;}
+  .topmenu.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topmenu.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+}
+/* BARRA DE ROLAGEM */
+/* tamanho */
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+} 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000; 
+}
+
+

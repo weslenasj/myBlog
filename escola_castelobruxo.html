@@ -8,28 +8,29 @@
 		<script src="js/myjs.js"></script>
 		<title>Bem-Vindo à Hogwarts</title>
 	</HEAD>
-	<BODY>
-		<!-- CABEÇALHO 
-		<section id="cabecalho">
-			<header>
+<body>
+	<section>
+		<header>
+			<a href="#myTopnav">
 				<div class="image"></div>
 				<div class="contener_cabecalho">
 					<h1>Bem-Vindo à Hogwarts</h1>
 					<h2> Conheça um pouco mais deste lugar mágico!</h2>
-				</div>				
-			</header>
-		</section> -->
-		<!-- MENU -->
-		<section id="menutop">
-			<nav class="menutop">
-				<a href="index.html" class="active">Página Inicial</a>
-				<a href="#floresta_hogwarts">Familias Bruxas</a>
-				<a href="#expresso_hogwarts">Animais Fantasticos</a>
-				<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="menuTop()">&#9776;</a>
-			</nav>
-		</section>
-		<!-- CORPO-->	
-		<section id="corpo">	
+				</div>		
+			</a>
+		</header>
+	</section>
+	<section>
+		<nav class="topmenu" id="myTopnav">			
+		  <a href="index.html" class="active">Início</a>
+		  <a href="#news">News</a>
+		  <a href="#contact">Contact</a>
+		  <a href="#about">About</a>
+		  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>			
+		</nav>
+	</section>
+	<!-- CORPO-->	
+		<section class="corpo">	
 			<!-- CasteloBruxos-->
 			<article>
 				<img src="img/castelobruxo.jpg" alt="Imagem da localização de Castelobruxo" width="100%;"/>
@@ -40,12 +41,41 @@
 				<p>Os estudantes de Castelobruxo usam vestes verdes brilhantes e são especialmente avançados em Herbologia e Magizoologia; a escola oferece programas de intercâmbio muito populares para estudantes europeus * que desejam estudar a flora e fauna mágicas da América do Sul. Castelobruxo produziu uma série de ex-estudantes famosos, incluindo um dos potioneers mais famosos do mundo, Libatius Borage (autor de, entre outras obras, Advanced Potion-Making , Asian-Anti-Venoms e Have Yourself Fiesta in a Bottle! ), e João Coelho, capitão da mundialmente conhecida equipe de Quadribol Tarapoto Tree-Skimmers.</p>
 
 				<p>*Foi uma dessas viagens que os pais de Bill Weasley não podiam pagar, fazendo com que seu amigo desapontado em Castelobruxo lhe enviasse algo desagradável na postagem.</p>
-			</article>		
+			</article>			
 		</section>
-		<section id="rodape">
-			<footer>
+	<section>
+		<footer>
+			<article> 
 				
-			</footer>
-		</section>	
-	</BODY>
-</HTML>
+			</article>
+			<article> 
+				
+			</article>
+		</footer>
+	</section>
+	
+	<script>
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topmenu") {
+				x.className += " responsive";
+			} else {
+				x.className = "topmenu";
+			}
+		}
+		
+		window.onscroll = function() {myFunction2()};
+
+		var navbar = document.getElementById("myTopnav");
+		var sticky = navbar.offsetTop;
+
+		function myFunction2() {
+		  if (window.pageYOffset >= sticky) {
+			navbar.classList.add("sticky")
+		  } else {
+			navbar.classList.remove("sticky");
+		  }
+		}
+	</script>
+</body>
+</html>

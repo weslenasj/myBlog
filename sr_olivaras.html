@@ -8,30 +8,29 @@
 		<script src="js/myjs.js"></script>
 		<title>Bem-Vindo à Hogwarts</title>
 	</HEAD>
-	<BODY>
-		<!-- CABEÇALHO 
-		<section id="cabecalho">
-			<header>
+<body>
+	<section>
+		<header>
+			<a href="#myTopnav">
 				<div class="image"></div>
 				<div class="contener_cabecalho">
 					<h1>Bem-Vindo à Hogwarts</h1>
 					<h2> Conheça um pouco mais deste lugar mágico!</h2>
-				</div>				
-			</header>
-		</section> -->
-		<!-- MENU -->
-		<section id="menutop">
-			<nav class="menutop">
-				<a href="index.html" class="active">Página Inicial</a>
-				<a href="#floresta_hogwarts">Familias Bruxas</a>
-				<a href="#expresso_hogwarts">Animais Fantasticos</a>
-				<a href="#casas">JK Rowling</a>
-				<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="menuTop()">&#9776;</a>
-			</nav>
-		</section>
-		<!-- CORPO-->	
-		<section id="corpo">
-			<article>
+				</div>		
+			</a>
+		</header>
+	</section>
+	<section>
+		<nav class="topmenu" id="myTopnav">			
+		  <a href="index.html" class="active">Início</a>
+		  <a href="#news">News</a>
+		  <a href="#contact">Contact</a>
+		  <a href="#about">About</a>
+		  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>			
+		</nav>
+	</section>
+	<section class="corpo">
+		<article>
 				<img src="img/sr_olli.jpg" alt="Loja do senhor Sr. Ollivander" width="100%">
 				<h1>Sr. Ollivander</h1>				
 				<p>A família de Ollivander tem sido associada com a misteriosa profissão de varinha. Diz-se que o nome significa "ele que possui a varinha de azeitona", o que sugere que o Ollivander original chegou na Grã-Bretanha de um país mediterrâneo (oliveiras não sendo nativas do Reino Unido). O próprio Ollivander acredita que seus primeiros antepassados ​​neste país chegaram com os romanos, e colocaram uma barraca (depois compra) para vender a antigos magos britânicos, cujas varinhas eram cruas de construção e pouco confiáveis ​​em performance.</p>	
@@ -52,10 +51,39 @@
 			</a>	
 			
 		</section>
-		<section id="rodape">
-			<footer>
+	<section>
+		<footer>
+			<article> 
 				
-			</footer>
-		</section>
-	</BODY>
-</HTML>
+			</article>
+			<article> 
+				
+			</article>
+		</footer>
+	</section>
+	
+	<script>
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topmenu") {
+				x.className += " responsive";
+			} else {
+				x.className = "topmenu";
+			}
+		}
+		
+		window.onscroll = function() {myFunction2()};
+
+		var navbar = document.getElementById("myTopnav");
+		var sticky = navbar.offsetTop;
+
+		function myFunction2() {
+		  if (window.pageYOffset >= sticky) {
+			navbar.classList.add("sticky")
+		  } else {
+			navbar.classList.remove("sticky");
+		  }
+		}
+	</script>
+</body>
+</html>

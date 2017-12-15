@@ -1,7 +1,0 @@
-https://www.w3schools.com/howto/default.asp (principal)
-
-https://www.w3schools.com/howto/howto_js_scroll_to_top.asp (botao de top)
-https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp (mudar a barra)
-https://www.w3schools.com/howto/howto_css_circles.asp (criando circulos)
-https://www.w3schools.com/howto/howto_css_tooltip.asp (comentarios)
-https://www.w3schools.com/cssref/css_pxtoemconversion.asp (conversour em em)
