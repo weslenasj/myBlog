@@ -12,7 +12,7 @@ p{
 h1{
   font-size: 5vw;
   font-family: 'Monotype Corsiva';
-  margin: 5px;
+  margin: 10px;
 }
 h2{
   font-size: 2em;
@@ -138,12 +138,14 @@ footer{
   background: #000; 
   height: auto;
   padding: 20px; 
+  overflow: hidden;
 }
 footer article{
-	width: 50%;
+	width: 48%;
 	height: 200px;
 	background: #fff;
 	float: left;
+	padding: 1%;
 }
 
 /* TEXTOS COM FUNDO DE IMAGENS*/
@@ -170,9 +172,6 @@ footer article{
     float: right;
     display: block;
   }
-}
-
-@media screen and (max-width: 600px) {
   .topmenu.responsive {position: relative;}
   .topmenu.responsive .icon {
     position: absolute;
@@ -184,7 +183,23 @@ footer article{
     display: block;
     text-align: left;
   }
-
+}
+@media screen and (max-width: 800px) {
+	h1{
+	  font-size: 10vw;
+	}
+	h2{
+	  font-size: 5vw;	  
+	}
+	#h_hogwarts img{
+		margin-right: 100%;
+	}
+	.corpo{
+		padding: 10px;
+	}
+	.corpo article{ 
+		width: 100%;
+	}
 }
 /* BARRA DE ROLAGEM */
 /* tamanho */
