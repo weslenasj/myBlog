@@ -97,7 +97,20 @@ header h2{
   max-width: 1000px;
   margin-bottom: 1.25em;
 }
-
+#galeria{
+    padding: .5vw;
+    font-size: 35px;
+    flex-flow: row wrap;
+    display: flex;
+}
+#galeria h1{
+  margin-right: 100%;
+}
+#galeria figure{
+  text-align: center;
+  border: solid #dee2cb 3px;
+  margin: auto;
+}
 /* HISTORIA DE HOGWARTS */
 #h_hogwarts img{
   float: left;
@@ -142,7 +155,7 @@ footer{
 }
 footer article{
 	width: 48%;
-	height: 200px;
+	/*height: 200px;*/
 	background: #fff;
 	float: left;
 	padding: 1%;
